@@ -120,7 +120,7 @@ while True:
                 print("an issue occured, try again")
                 continue
 
-            if ".mp4" in directory:
+            if ".mp3" in directory:
                 try:
                     sound = AudioSegment.from_mp3(directory)
                     sound.export(directory+".wav", format="wav")
@@ -142,7 +142,6 @@ while True:
                 f.write("""
 {
   "play": \""""+bindstring+"""\",
-  "volume": "50"
 }
                 """)
                 f.flush()
@@ -166,13 +165,10 @@ while True:
 
             bindstring = bindstring.replace("\\", "\\\\")
 
-            print(bindstring)
-
             with open("config.json", "w") as f:
                 f.write("""
 {
   "play": \""""+bindstring+"""\",
-  "volume": "50"
 }
                 """)
                 f.flush()
