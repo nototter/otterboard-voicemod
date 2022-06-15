@@ -5,6 +5,7 @@ import time
 import json
 from pydub import AudioSegment, playback
 from pydub.playback import play
+import os
 
 binds = []
 stopbind = ""
