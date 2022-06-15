@@ -1,14 +1,10 @@
 import threading
-import sounddevice as sd
-import soundfile as sf
 import keyboard
 import pygame
 import time
 import json
 from pydub import AudioSegment, playback
 from pydub.playback import play
-from pytube import YouTube
-import os
 
 binds = []
 stopbind = ""
